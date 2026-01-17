@@ -2,8 +2,6 @@
 
 I've created 100 PowerShell scripts specifically designed for managing, reporting, and auditing Microsoft 365 environments.
 
-Here is a collection of 100 custom PowerShell scripts designed to streamline Microsoft 365 administration, reporting, and auditing.
-
 Built to solve common day-to-day IT challenges, these scripts include capabilities such as:
 
 License Management: Bulk assignment and removal.

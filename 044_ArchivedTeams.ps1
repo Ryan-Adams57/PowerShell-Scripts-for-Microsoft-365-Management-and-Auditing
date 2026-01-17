@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -Filter "resourceProvisioningOptions/any(x:x eq 'Team')" | ForEach-Object { $t=Get-MgTeam -TeamId $_.Id; if($t.IsArchived){$t} } | Export-Csv "044_ArchivedTeams.csv" } Catch { Write-Error $_ }

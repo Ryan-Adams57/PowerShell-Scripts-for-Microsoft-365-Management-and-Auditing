@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "User.Read.All"; $d=(Get-Date).AddDays(-30).ToString("yyyy-MM-ddT00:00:00Z"); Get-MgUser -Filter "createdDateTime ge $d" | Export-Csv "012_NewUsers30Days.csv" } Catch { Write-Error $_ }

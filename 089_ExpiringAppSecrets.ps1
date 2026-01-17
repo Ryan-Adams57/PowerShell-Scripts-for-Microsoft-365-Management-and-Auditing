@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "Application.Read.All"; Get-MgApplication -All | ForEach-Object { $a=$_.DisplayName; $_.PasswordCredentials | Where-Object {$_.EndDate -lt (Get-Date).AddDays(30)} | Select-Object @{N="App";E={$a}}, EndDate } | Export-Csv "089_AppExpiry.csv" } Catch { Write-Error $_ }

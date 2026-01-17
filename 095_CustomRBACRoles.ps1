@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "RoleManagement.Read.Directory"; Get-MgDirectoryRoleTemplate | Where-Object {$_.DisplayName -notlike "Standard*"} | Export-Csv "095_CustomRoles.csv" } Catch { Write-Error $_ }

@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "DeviceManagementManagedDevices.Read.All"; Get-MgDeviceManagementManagedDevice -Filter "complianceState eq 'noncompliant'" | Export-Csv "078_NonCompliant.csv" } Catch { Write-Error $_ }

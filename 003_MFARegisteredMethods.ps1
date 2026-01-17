@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All"; Get-MgUser -All | ForEach-Object { $m = Get-MgUserAuthenticationMethod -UserId $_.Id; [PSCustomObject]@{User=$_.UserPrincipalName;Methods=($m.AdditionalProperties.methodType -join ";")} } | Export-Csv "003_MFARegisteredMethods.csv" } Catch { Write-Error $_ }

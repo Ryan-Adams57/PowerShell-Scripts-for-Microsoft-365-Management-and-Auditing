@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -All | ForEach-Object { [PSCustomObject]@{Group=$_.DisplayName;Count=(Get-MgGroupMember -GroupId $_.Id -All).Count} } | Export-Csv "026_GroupMemberCounts.csv" } Catch { Write-Error $_ }

@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -All | Where-Object {$_.AssignedLicenses.SkuId -contains "05d19d13-0a13-436d-979d-33d36b801550"} | Export-Csv "087_E5Users.csv" } Catch { Write-Error $_ }

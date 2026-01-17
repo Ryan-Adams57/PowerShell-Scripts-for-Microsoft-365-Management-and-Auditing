@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All"; Get-MgUser -All | ForEach-Object { $m=Get-MgUserAuthenticationMethod -UserId $_.Id; if($m.Count -gt 1){$_} } | Export-Csv "097_MultiMFA.csv" } Catch { Write-Error $_ }

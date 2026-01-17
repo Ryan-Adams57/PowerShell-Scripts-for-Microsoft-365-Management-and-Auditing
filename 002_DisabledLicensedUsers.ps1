@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -Filter "accountEnabled eq false and assignedLicenses/`$count ne 0" -ConsistencyLevel eventual -All | Export-Csv "002_DisabledLicensedUsers.csv" } Catch { Write-Error $_ }

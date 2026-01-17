@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -Filter "userType eq 'Guest'" -All | Select-Object DisplayName, @{N="Domain";E={$_.UserPrincipalName.Split("#")[-1]}} | Export-Csv "005_GuestUserDomains.csv" } Catch { Write-Error $_ }

@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "UserAuthenticationMethod.Read.All"; Get-MgUser -All | Where-Object { !(Get-MgUserAuthenticationMethod -UserId $_.Id) } | Export-Csv "004_UsersWithoutMFA.csv" } Catch { Write-Error $_ }

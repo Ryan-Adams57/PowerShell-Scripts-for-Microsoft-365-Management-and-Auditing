@@ -1,0 +1,1 @@
+Try { Connect-ExchangeOnline; $d=(Get-Date).AddDays(-30); Get-EXOMailboxStatistics -ResultSize Unlimited | Where-Object {$_.LastLogonTime -lt $d} | Export-Csv "060_StaleMailboxes.csv" } Catch { Write-Error $_ }

@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgUser -Filter "userType eq 'Guest'" | ForEach-Object { $u=$_.UPN; Get-MgUserMemberOf -UserId $_.Id | Select-Object @{N="Guest";E={$u}}, AdditionalProperties } | Export-Csv "011_GuestGroups.csv" } Catch { Write-Error $_ }

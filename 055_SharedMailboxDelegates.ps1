@@ -1,0 +1,1 @@
+Try { Connect-ExchangeOnline; Get-EXOMailbox -RecipientTypeDetails SharedMailbox | Get-EXOMailboxPermission | Where-Object {$_.User -notlike "*SELF*"} | Export-Csv "055_SharedDelegates.csv" } Catch { Write-Error $_ }

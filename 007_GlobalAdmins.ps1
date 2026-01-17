@@ -1,0 +1,1 @@
+Try { Connect-MgGraph -Scopes "RoleManagement.Read.Directory"; $r = Get-MgDirectoryRole -Filter "DisplayName eq 'Global Administrator'"; Get-MgDirectoryRoleMember -DirectoryRoleId $r.Id | Export-Csv "007_GlobalAdmins.csv" } Catch { Write-Error $_ }

@@ -1,23 +1,7 @@
-# PowerShell-Scripts-for-Microsoft-365-Management-and-Auditing
+# Microsoft 365 PowerShell Scripts
 
-I've created 100 PowerShell scripts specifically designed for managing, reporting, and auditing Microsoft 365 environments.
+A collection of PowerShell scripts for managing, auditing, and reporting on Microsoft 365 tenants.
 
-These Windows PowerShell scripts are one-line commands.
+Each script includes built-in documentation, parameter support, and clear output to simplify day-to-day admin tasks.
 
-These scripts include capabilities such as:
-
-License Management: Bulk assignment and removal.
-
-Security Auditing: Detecting external email forwarding and monitoring external sharing.
-
-User Lifecycle: Identifying inactive accounts and tracking sign-in activity.
-
-Content Oversight: Tracking SharePoint file deletions and auditing email removals.
-
-Resource & Collaboration: Reporting on room mailbox usage, calendar permissions, and Teams meeting attendance.
-
-Each script is optimized for automation via Task Scheduler or Azure Automation.
-
-Download them for free here.
-
-Please reach out with any suggestions or specific script requirements you would like to see added.
+Scripts are provided as-is. Review and test before running in production.

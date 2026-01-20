@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "AuditLog.Read.All"; $d = (Get-Date).AddDays(-90); Get-MgUser -All -Property SignInActivity | Where-Object { $_.SignInActivity.LastSignInDateTime -lt $d } | Export-Csv "006_StaleUsers.csv" } Catch { Write-Error $_ }

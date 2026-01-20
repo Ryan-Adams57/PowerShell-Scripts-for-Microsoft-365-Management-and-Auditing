@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -Filter "resourceProvisioningOptions/any(x:x eq 'Team')" | Select-Object DisplayName, Visibility | Export-Csv "029_TeamVisibility.csv" } Catch { Write-Error $_ }

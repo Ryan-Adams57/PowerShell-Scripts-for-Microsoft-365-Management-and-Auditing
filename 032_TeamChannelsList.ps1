@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Channel.ReadBasic.All"; Get-MgGroup -Filter "resourceProvisioningOptions/any(x:x eq 'Team')" | ForEach-Object { $t=$_.DisplayName; Get-MgTeamChannel -TeamId $_.Id | Select-Object @{N="Team";E={$t}}, DisplayName } | Export-Csv "032_TeamChannels.csv" } Catch { Write-Error $_ }

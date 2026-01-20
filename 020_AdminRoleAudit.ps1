@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "RoleManagement.Read.Directory"; Get-MgDirectoryRole | ForEach-Object { $rn=$_.DisplayName; Get-MgDirectoryRoleMember -DirectoryRoleId $_.Id | Select-Object @{N="Role";E={$rn}}, AdditionalProperties } | Export-Csv "020_AdminRoleAudit.csv" } Catch { Write-Error $_ }

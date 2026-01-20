@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -All | Where-Object { $_.PasswordPolicies -contains "DisablePasswordExpiration" } | Export-Csv "009_PasswordNeverExpires.csv" } Catch { Write-Error $_ }

@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -Filter "resourceProvisioningOptions/any(x:x eq 'Team')" | ForEach-Object { Get-MgTeam -TeamId $_.Id | Select-Object DisplayName, GuestSettings } | Export-Csv "041_TeamGuestSettings.csv" } Catch { Write-Error $_ }

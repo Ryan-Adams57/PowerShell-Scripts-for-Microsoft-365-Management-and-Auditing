@@ -1,1 +1,0 @@
-Try { Connect-ExchangeOnline; Get-EXOMailbox -ResultSize Unlimited | Get-EXOMailboxPermission | Where-Object {$_.User -notlike "*SELF*"} | Export-Csv "053_MailboxPermissions.csv" } Catch { Write-Error $_ }

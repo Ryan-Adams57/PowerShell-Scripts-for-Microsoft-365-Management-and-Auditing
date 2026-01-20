@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -All | ForEach-Object { $m=$_.DisplayName; Get-MgUserDirectReport -UserId $_.Id | Select-Object @{N="Manager";E={$m}}, DisplayName } | Export-Csv "014_ManagerDirectReports.csv" } Catch { Write-Error $_ }

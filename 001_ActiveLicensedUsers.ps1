@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "User.Read.All"; Get-MgUser -Filter "assignedLicenses/`$count ne 0" -ConsistencyLevel eventual -All | Select-Object DisplayName, UserPrincipalName | Export-Csv "001_ActiveLicensedUsers.csv" } Catch { Write-Error $_ }

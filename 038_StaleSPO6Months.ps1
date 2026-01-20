@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Reports.Read.All"; Get-MgReportSharePointSiteUsageDetail -Period "D180" | Where-Object {!$_.LastActivityDate} | Export-Csv "038_StaleSPO.csv" } Catch { Write-Error $_ }

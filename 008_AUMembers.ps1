@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "AdministrativeUnit.Read.All"; Get-MgAdministrativeUnit -All | ForEach-Object { $au=$_.DisplayName; Get-MgAdministrativeUnitMember -AdministrativeUnitId $_.Id | Select-Object @{N="AU";E={$au}}, AdditionalProperties } | Export-Csv "008_AUMembers.csv" } Catch { Write-Error $_ }

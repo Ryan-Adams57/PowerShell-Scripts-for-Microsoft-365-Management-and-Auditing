@@ -1,1 +1,0 @@
-Try { Connect-ExchangeOnline; Get-DistributionGroup | ForEach-Object { $g=$_.DisplayName; Get-DistributionGroupMember -Identity $_.Identity | Select-Object @{N="Group";E={$g}}, PrimarySmtpAddress } | Export-Csv "054_DistGroups.csv" } Catch { Write-Error $_ }

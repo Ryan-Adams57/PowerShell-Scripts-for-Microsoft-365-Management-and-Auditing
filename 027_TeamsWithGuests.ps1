@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -Filter "resourceProvisioningOptions/any(x:x eq 'Team')" | ForEach-Object { $g = Get-MgGroupMember -GroupId $_.Id -All | Where-Object {$_.AdditionalProperties.userType -eq "Guest"}; if($g){[PSCustomObject]@{Team=$_.DisplayName;GuestCount=$g.Count}} } | Export-Csv "027_TeamsWithGuests.csv" } Catch { Write-Error $_ }

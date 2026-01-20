@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Group.Read.All"; Get-MgGroup -Filter "groupTypes/any(c:c eq 'Unified')" | ForEach-Object { $gn=$_.DisplayName; Get-MgGroupOwner -GroupId $_.Id | Select-Object @{N="Group";E={$gn}}, AdditionalProperties } | Export-Csv "013_GroupOwners.csv" } Catch { Write-Error $_ }

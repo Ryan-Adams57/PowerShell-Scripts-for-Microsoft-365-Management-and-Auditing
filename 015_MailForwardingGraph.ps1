@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Mail.ReadBasic"; Get-MgUser -All -Property MailboxSettings | Where-Object { $_.MailboxSettings.ForwardingAddress } | Export-Csv "015_MailForwarding.csv" } Catch { Write-Error $_ }

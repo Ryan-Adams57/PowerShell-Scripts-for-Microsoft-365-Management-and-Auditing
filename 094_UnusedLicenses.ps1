@@ -1,1 +1,0 @@
-Try { Connect-MgGraph -Scopes "Organization.Read.All"; Get-MgSubscribedSku | Select-Object SkuPartNumber, @{N="Unused";E={$_.PrepaidUnits.Enabled - $_.ConsumedUnits}} | Export-Csv "094_UnusedLicenses.csv" } Catch { Write-Error $_ }

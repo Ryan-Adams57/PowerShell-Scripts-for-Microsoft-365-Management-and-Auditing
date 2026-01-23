@@ -10,7 +10,7 @@ Acknowledgements
 
 This repository has benefited from thoughtful community feedback. Special thanks to:
 
-@Snickasaurus  —
+@Snickasaurus (https://github.com/Snickasaurus)  —
 
 Provided multiple suggestions that directly improved the repository, including:
 

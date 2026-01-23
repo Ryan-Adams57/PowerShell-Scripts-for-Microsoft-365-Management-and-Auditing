@@ -1,3 +1,5 @@
+**ATTENTION** **These PowerShell Scripts are currently is BETA** **Please test each script one by one before use** **Edit each script as needed until full production is complete**
+
 # Microsoft 365 PowerShell Scripts
 
 A collection of PowerShell scripts for managing, auditing, and reporting on Microsoft 365 tenants.

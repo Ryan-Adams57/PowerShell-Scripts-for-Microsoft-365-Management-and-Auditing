@@ -5,3 +5,21 @@ A collection of PowerShell scripts for managing, auditing, and reporting on Micr
 Each script includes built-in documentation, parameter support, and clear output to simplify day-to-day admin tasks.
 
 Scripts are provided as-is. Review and test before running in production.
+
+Acknowledgements
+
+This repository has benefited from thoughtful community feedback. Special thanks to:
+
+@Snickasaurus  —
+
+Provided multiple suggestions that directly improved the repository, including:
+
+Recommending the creation of 00-Install-365Modules.ps1 to consolidate module installation across all scripts
+
+Advising the prepending of zeros to scripts 1–9 for proper sorting
+
+Highlighting that 12-Get-M365RiskySignInsReport.ps1 is a template and suggesting clarification
+
+Noting formatting issues (extra slashes) in scripts 42–50
+
+Thanks to these contributions, the repository is now cleaner, better organized, and easier to use for administrators managing Microsoft 365 environments.

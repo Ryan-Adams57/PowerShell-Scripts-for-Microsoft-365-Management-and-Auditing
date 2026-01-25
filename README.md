@@ -8,7 +8,7 @@ Each script includes built-in documentation, parameter support, and clear output
 
 Scripts are provided as-is. Review and test before running in production.
 
-Acknowledgements
+# Acknowledgements
 
 This repository has benefited from thoughtful community feedback. Special thanks to:
 

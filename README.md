@@ -23,5 +23,3 @@ Advising the prepending of zeros to scripts 1–9 for proper sorting
 Highlighting that 12-Get-M365RiskySignInsReport.ps1 is a template and suggesting clarification
 
 Noting formatting issues (extra slashes) in scripts 42–50
-
-Thanks to these contributions, the repository is now cleaner, better organized, and easier to use for administrators managing Microsoft 365 environments.

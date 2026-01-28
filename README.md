@@ -8,6 +8,10 @@ Each script includes built-in documentation, parameter support, and clear output
 
 Scripts are provided as-is. Review and test before running in production.
 
+These scripts have been tested in my HomeLab environment using Windows Server, Virtual Machines, Windows Sandbox, AutomatedLab, and Pester. 
+
+They have **not** been tested in a production or enterprise environment such as Microsoft 365 or Office 365.
+
 # Acknowledgements
 
 This repository has benefited from thoughtful community feedback. Special thanks to:
